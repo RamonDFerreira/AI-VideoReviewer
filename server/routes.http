@@ -21,7 +21,7 @@ POST http://localhost:3333/videos/e25de565-41b2-4af9-8b44-d40502501e1e/transcrip
 Content-type: application/json
 
 {
-  "prompt": "opções, feature, bucket, lifecycle, police, on demand, glacier"
+  "prompt": "opções, feature, bucket, lifecicle, police, on demand, glacier"
 }
 
 ###
@@ -33,5 +33,5 @@ Content-type: application/json
 {
   "videoId": "e25de565-41b2-4af9-8b44-d40502501e1e",
   "temperature": 0.5,
-  "template": "Gere um resumo sucinto da transcrição do vídeo informada a seguir: '''{transcription}'''"
+  "prompt": "Gere um resumo sucinto da transcrição do vídeo informada a seguir: '''{transcription}'''"
 }
