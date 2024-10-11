@@ -15,8 +15,6 @@ export function App() {
   const [temperature, setTemperature] = useState(0.5)
   const [videoId, setVideoId] = useState<string | null>(null)
 
-  console.log(`${api}/ai/complete`)
-
   const {
     input, 
     setInput,
@@ -25,7 +23,7 @@ export function App() {
     completion, 
     isLoading,
   } = useCompletion({
-    api: `${api}/ai/complete`,
+    api: `http://172.17.9.69:3333/ai/complete`,
     body: {
       videoId,
       temperature,
