@@ -9,6 +9,7 @@ import { VideoInputForm } from './components/video-input-form';
 import { PromptSelect } from './components/prompt-select';
 import { useState } from 'react';
 import { useCompletion } from 'ai/react'
+import { api } from "@/lib/axios";
 
 export function App() {
   const [temperature, setTemperature] = useState(0.5)
@@ -22,7 +23,7 @@ export function App() {
     completion, 
     isLoading,
   } = useCompletion({
-    api: 'http://localhost:3333/ai/complete',
+    api: `${api}/ai/complete`,
     body: {
       videoId,
       temperature,
